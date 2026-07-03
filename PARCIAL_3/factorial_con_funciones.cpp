@@ -9,12 +9,15 @@ void pedirNumero(int &numero) {
     std::cin >> numero;
 }
 
-long long calcularFactorial(int numero) { // long long es utilizado para manejar números grandes 
-    long long factorial = 1;
-    for (int i = 1; i <= numero; ++i) {
-        factorial *= i;
+// long long es utilizado para manejar números grandes 
+long long calcularFactorial(int numero) { 
+  
+    if (numero <= 1) {
+        return 1;
     }
-    return factorial;
+    else {
+        return numero * calcularFactorial(numero - 1);
+    }
 }
 
 int main (){
