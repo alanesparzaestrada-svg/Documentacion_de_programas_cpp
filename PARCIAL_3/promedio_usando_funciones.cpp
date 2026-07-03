@@ -10,16 +10,18 @@ void pedirDatos(int &num1, int &num2) {
 }
 // Función para calcular la suma de dos números
 int calcularsuma(int num1, int num2) {
-    int suma = 0;
-
-    suma = num1 + num2;
-    return suma;
+    if (num1 > num2) {
+        return 0;
+    }
+    else {
+        return num1 + calcularsuma(num1 + 1, num2);
+    }
 }
 
 // Función para calcular el promedio de dos números
 float calcularPromedio(int suma, int num1, int num2) {
     float promedio = 0.0;
-    promedio = (float)suma / 2;
+    promedio = (float)suma / ((num2 - num1) + 1);
     return promedio;
 }
 // Función para mostrar los resultados
@@ -38,7 +40,7 @@ int main() {
     pedirDatos(num1, num2);
  //aqui se verifica que el primer numero ingresado sea mayor o igual al segundo numero ingresado pr el ususario
  // si no se cumple esta condicion, el programa mostrara un mensaje de error y terminar la ejecuicion del programa.
-    if (num1 >= num2) {
+    if (num1 > num2) {
         std::cout << "El primer numero debe ser menor o igual al segundo." << std::endl;
         return 0;
     }
