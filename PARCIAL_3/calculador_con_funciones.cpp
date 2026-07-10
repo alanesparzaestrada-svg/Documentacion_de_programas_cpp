@@ -11,13 +11,20 @@ void mostrarMenu() {
 
 // funciones para las operaciones matemáticas
 double suma(double num1, double num2) { return num1 + num2; }
+// esta funcion suma el numero 1 + el numero 2
 double resta(double num1, double num2) { return num1 - num2; }
+// esta funcion resta  el numero 1 - el numero 2
 double multiplicacion(double num1, double num2) { return num1 * num2; }
+// esta funcion multiplica  el numero 1   * el numero 2
 double division(double num1, double num2) { return num1 / num2; }
+// esta funcion divide  el numero 1 / el numero 2
 
 // función principal
 int main() {
     double num1, num2, resultado;
+    //la funcion num1 garda el primer valor ingrsado por el usuario
+     //la funcion num1 garda el segundo  valor ingrsado por el usuario
+    //la funcion resultado Guarda el valor final de la operación aritmética ejecutada.
     int opcion;
 
     // ciclo do-while para mantener el programa en ejecución hasta que el usuario decida salir
