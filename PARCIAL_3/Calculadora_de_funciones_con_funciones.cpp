@@ -2,12 +2,51 @@
 
 //  FUNCIONES 
 float calcularTriangular(float x, float a, float m, float b);
-float calcularGamma(float x, float a, float m);
+// calcularTriangular: Evalúa X en una curva con forma de triángulo.
+// - x: El valor numérico que se desea evaluar.
+// - a: Límite inferior izquierdo (donde la membresía empieza a subir desde 0).
+// - m: Punto medio o cúspide (donde la membresía llega a su punto máximo: 1.0).
+// - b: Límite inferior derecho (donde la membresía termina de bajar a 0).
+
+float calcularGamma(float x, float a, float m); 
+// calcularGamma: Evalúa X en una curva de crecimiento Gamma.
+// - x: El valor numérico que se desea evaluar.
+// - a: Punto base izquierdo donde el valor empieza a crecer desde 0.
+// - m: Punto de saturación donde el valor alcanza 1.0 y se mantiene constante.
+
 float calcularL(float x, float a, float m);
+// calcularTrapezoidal: Evalúa X en una curva con forma de trapecio.
+// - x: El valor numérico que se desea evaluar.
+// - a: Inicio del trapecio (comienza la rampa de subida).
+// - b: Inicio de la meseta alta (alcanza el valor estable de 1.0).
+// - c: Fin de la meseta alta (comienza la rampa de bajada).
+// - d: Fin del trapecio (vuelve a valer 0.0).
+
 float calcularTrapezoidal(float x, float a, float b, float c, float d);
+// calcularTrapezoidal: Evalúa X en una curva con forma de trapecio.
+// - x: El valor numérico que se desea evaluar.
+// - a: Inicio del trapecio (comienza la rampa de subida).
+// - b: Inicio de la meseta alta (alcanza el valor estable de 1.0).
+// - c: Fin de la meseta alta (comienza la rampa de bajada).
+// - d: Fin del trapecio (vuelve a valer 0.0).
+
 float calcularS(float x, float a, float c);
+// calcularS: Evalúa X en una curva suave de crecimiento sigmoide (Forma S).
+// - x: El valor numérico que se desea evaluar.
+// - a: Límite inferior donde la curva empieza a subir desde 0.0.
+// - c: Límite superior donde la curva se estabiliza en 1.0.
+
 float calcularZ(float x, float a, float c);
+// calcularZ: Evalúa X en una curva suave de decrecimiento sigmoide (Forma Z).
+// - x: El valor numérico que se desea evaluar.
+// - a: Límite inferior donde la curva vale 1.0 antes de empezar a bajar.
+// - c: Límite superior donde la curva cae por completo a 0.0.
+
 float calcularPi(float x, float b, float d);
+// calcularPi: Evalúa X en una curva con forma de campana Pi (combinación de S y Z).
+// - x: El valor numérico que se desea evaluar.
+// - b: Centro o punto máximo de la campana (donde vale 1.0).
+// - d: Ancho o radio de la base a cada lado del centro.
 
 
 // FUNCIÓN PRINCIPAL
@@ -35,9 +74,9 @@ int main() {
     float pi_b = 5.0f, pi_d = 2.0f; 
 
     // Variables de control del usuario
-    int opcion;
-    float x;
-    float resultado = 0.0f;
+    int opcion;// Guarda la opción del menú seleccionada por el usuario (1-7).
+    float x; // Almacena el valor de X introducido para ser evaluado.
+    float resultado = 0.0f; //Guarda el grado de membresía final calculado.
 
     // MENÚ DE SELECCIÓN DE ECUACIONES
     printf("===================================================\n");
